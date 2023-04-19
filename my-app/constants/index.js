@@ -1,4 +1,4 @@
-export const WHITELIST_CONTRACT_ADDRESS = "0xf73e983808C08dB0512891277E30c24e3D343BB0";
+export const WHITELIST_CONTRACT_ADDRESS = "0x0CC9453C79f19b8330F42d6f95433f50B269101E";
 
 export const abi = [
     {
@@ -44,5 +44,24 @@ export const abi = [
       ],
       "stateMutability": "view",
       "type": "function"
-    }
-  ]
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address",
+        },
+      ],
+      "name": "whitelistedAddresses",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool",
+        },
+      ],
+      "stateMutability": "view",
+      "type": "function",
+    },
+];
