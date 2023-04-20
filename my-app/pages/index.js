@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import styles from "../styles/Home.module.css";
 import Web3Modal from "web3modal";
 import { Contract, providers }from "ethers";
-import { WHITELIST_CONTRACT_ADDRESS,abi } from '@/constants';
-import { render } from 'react-dom';
+import { WHITELIST_CONTRACT_ADDRESS,abi } from "../constants";
+
 
 export default function Home() {
   
@@ -52,7 +52,7 @@ export default function Home() {
     }
   };
 
-  const getNumberOfWhitelisted = async() => {
+  const getNumberOfWhitelisted = async () => {
     try {
       const provider = await getProviderOrSigner();
       const whitelistContract = new Contract(
@@ -109,7 +109,7 @@ export default function Home() {
       } else if(loading){
         return <button className={styles.button}>
           Loading....
-        </button>
+        </button>;
       } else {
         return(
           <button onClick={addAddressToWhitelist} className={styles.button}>
@@ -136,7 +136,7 @@ export default function Home() {
         providerOptions: {},
         disableInjectedProvider: false,
       });
-      connectWallet()
+      connectWallet();
     }
   }, [walletConnected]);
 
@@ -168,6 +168,6 @@ export default function Home() {
         Made with &#10084; by Sourabh
       </footer>
     </div>
-  )
+  );
 }
 
